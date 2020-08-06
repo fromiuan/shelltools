@@ -11,7 +11,7 @@ rootFile=~
 
 function printHelp() {
   echo "Usage: "
-  echo "  start.sh <arg>"
+  echo "  mgr.sh <arg>"
   echo "    <arg> - one of 'start', 'upgrade', 'stop', 'restart', 'version', 'help'"
   echo "      - 'help'       - echo help information "
   echo "      - 'start'      - run start project "
