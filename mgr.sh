@@ -55,7 +55,6 @@ function beforStart() {
 
 # run befor upgrade command check
 function beforUpgrade() {
-  
   beforStart
   if [ ! -f "${rootFile}/${PROJECT_NAME}" ]; then
     echo "not find file ${PROJECT_NAME} in '${rootFile}' dir"
