@@ -5,11 +5,11 @@ source /etc/init.d/functions
 #2.  this command will NOT push image to registry
 
 # container variables
-build_dir="/data/server/fire-callback-srv/"
+build_dir="/data/server/srv/"
 # must same as docker-compose.yml  ---> image: ${docker_repository}/${stack_name}_${service_name}:0.01
 docker_repository="registry.cn-shanghai.aliyuncs.com/ixindui"
 stack_name="xd"
-service_name="fire-callback-srv"
+service_name="srv"
 package_name="${service_name}.jar"
 container_name=${service_name}
 
@@ -92,7 +92,7 @@ docker_arrange() {
   cd ${build_dir}
   docker stop ${container_name}
   docker rm ${container_name}
-  docker run --name ${container_name} -p 18015:18015 -v /data/server/static-file/:/data/server/static-file/ -v /data/server/fire-callback-srv/logs:/logs -d ${docker_image_name}
+  docker run --name ${container_name} -p 18015:18015 -v /data/server/static-file/:/data/server/static-file/ -v /data/server/srv/logs:/logs -d ${docker_image_name}
  # docker stack deploy -c docker-compose.yml ${stack_name} --with-registry-auth
   message_result "docker run ${docker_image_name}"
 }
