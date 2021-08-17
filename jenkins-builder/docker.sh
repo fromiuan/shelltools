@@ -13,10 +13,6 @@ service_name="srv"
 package_name="${service_name}.jar"
 container_name=${service_name}
 
-# initialization variables(firewall security)
-# source_ip="172.19.239.0/20"
-# clear variables(clear remote containers and images)
-#remote_ips=("192.168.1.1")
 
 # Information and state output
 message_result() {

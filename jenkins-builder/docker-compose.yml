@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   api:
-    image: fire-callback-srv:0.01
+    image: srv:0.01
     deploy:
       replicas: 1
       resources:
@@ -9,10 +9,10 @@ services:
           cpus: "1"
           memory: 2048M
     ports:
-      - "18015:18015"
+      - "8015:8015"
     networks:
       - net
     volumes:
-      - /data/server/fire-callback-srv/:/app/
+      - /data/srv/:/app/
 networks:
   net:
